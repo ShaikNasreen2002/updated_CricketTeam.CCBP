@@ -1,0 +1,42 @@
+-------------------------------------------------------------------------------
+Test set: com.example.player.PlayerControllerTests
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 12.1 s <<< FAILURE! - in com.example.player.PlayerControllerTests
+testgetPlayers  Time elapsed: 2.003 s  <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$[0].playerId"
+	at com.example.player.PlayerControllerTests.testgetPlayers(PlayerControllerTests.java:37)
+Caused by: com.jayway.jsonpath.PathNotFoundException: No results for path: $[0]['playerId']
+
+testgetPlayerById  Time elapsed: 0.11 s  <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$.playerId"
+	at com.example.player.PlayerControllerTests.testgetPlayerById(PlayerControllerTests.java:104)
+Caused by: com.jayway.jsonpath.PathNotFoundException: No results for path: $['playerId']
+
+testpost  Time elapsed: 0.606 s  <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$.playerId"
+	at com.example.player.PlayerControllerTests.testpost(PlayerControllerTests.java:181)
+Caused by: com.jayway.jsonpath.PathNotFoundException: No results for path: $['playerId']
+
+testafterpost  Time elapsed: 0.099 s  <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$.playerId"
+	at com.example.player.PlayerControllerTests.testafterpost(PlayerControllerTests.java:191)
+Caused by: com.jayway.jsonpath.PathNotFoundException: No results for path: $['playerId']
+
+testputNotFound  Time elapsed: 0.11 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<404> but was:<500>
+	at com.example.player.PlayerControllerTests.testputNotFound(PlayerControllerTests.java:208)
+
+testput  Time elapsed: 0.192 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<500>
+	at com.example.player.PlayerControllerTests.testput(PlayerControllerTests.java:222)
+
+testafterput  Time elapsed: 0.099 s  <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$.playerId"
+	at com.example.player.PlayerControllerTests.testafterput(PlayerControllerTests.java:235)
+Caused by: com.jayway.jsonpath.PathNotFoundException: No results for path: $['playerId']
+
+testafterdelete  Time elapsed: 0.206 s  <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$[0].playerId"
+	at com.example.player.PlayerControllerTests.testafterdelete(PlayerControllerTests.java:266)
+Caused by: com.jayway.jsonpath.PathNotFoundException: No results for path: $[0]['playerId']
+
